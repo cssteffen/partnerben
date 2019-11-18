@@ -1,0 +1,19 @@
+.paycheckPage_div h2 {
+  color: #7c795d;
+  font-size: 1.2em;
+  font-weight: 600;
+  /*line-height: 32px;*/
+  margin: 0;
+  /*flex: 4;
+    font-size: 1.1em;
+    font-weight: bold;*/
+}
+
+.paycheckPage_div .subtitle {
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: 300;
+  color: #aaa;
+  margin: 0 auto;
+  padding: 10px;
+}

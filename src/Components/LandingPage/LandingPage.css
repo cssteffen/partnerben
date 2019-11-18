@@ -1,0 +1,73 @@
+.box {
+  margin: 0 auto;
+  background-color: white;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.welcomeFont {
+  color: #00723f;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+.box1 {
+  margin: 0 auto;
+  background-image: linear-gradient(to bottom right, #eac784, #00723f, #604c4c);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.spinny-logo-cup {
+  filter: invert();
+  margin-top: 25px;
+}
+
+.paycheckImg {
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.scrollImg {
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+  scroll-behavior: auto;
+}
+
+.landingPage_div h2 {
+  color: #7c795d;
+  font-size: 1.2em;
+  font-weight: 600;
+  /*line-height: 32px;*/
+  margin: 0 0 24px;
+  /*flex: 4;
+  font-size: 1.1em;
+  font-weight: bold;*/
+}
+.landingPage_div p {
+  font-size: 0.9em;
+  font-weight: 300;
+  color: rgb(133, 133, 133);
+  margin: 10px 0 20px 0;
+}
+
+.landingPage_div > .subtitle {
+  font-size: 0.9em;
+  font-weight: 300;
+  color: #aaa;
+  margin: -20px 0 20px 0;
+  padding: 10px;
+}
+
+.reset-link {
+  text-decoration: none;
+  color: #00723f;
+}
+
+.reset-link:hover {
+  color: black;
+  cursor: pointer;
+}

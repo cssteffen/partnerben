@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "partnerben",
+  "routes": [
+    {
+      "src": "^/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "^/static/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}

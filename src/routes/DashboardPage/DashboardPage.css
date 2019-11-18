@@ -1,0 +1,56 @@
+.ListItem__icon {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ListItem__circle {
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.dashIcons {
+  font-size: 1.3em;
+}
+
+.dashboardPage_div h2 {
+  color: #7c795d;
+  font-size: 1.2em;
+  font-weight: 600;
+  /*line-height: 32px;*/
+  margin: 0 0 24px;
+  /*flex: 4;
+  font-size: 1.1em;
+  font-weight: bold;*/
+}
+.dashboardPage_div p {
+  font-size: 0.9em;
+  font-weight: 300;
+  color: #aaa;
+  margin: -10px 0 20px 0;
+}
+
+.subtitle {
+  font-size: 0.9em;
+  font-weight: 300;
+  color: #aaa;
+  margin: -20px 0 20px 0;
+}
+
+.weekly_average,
+.goal_status_hours,
+.vacation_hours,
+.sick_hours,
+.ben_hours {
+  margin: 0;
+  font-size: 3em;
+  color: #444;
+  font-weight: 800;
+}
