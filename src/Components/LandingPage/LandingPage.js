@@ -23,8 +23,8 @@ export default class LandingPage extends Component {
             <span className="welcomeFont">Welcome to PartnerBen</span>
           </h2>
           <p className="subtitle">
-            an online management system to track vacation, sick + BEN hours and
-            maintain eligibility for benefits.
+            An online management system to easily track <br />
+            vacation, sick + BEN hours for maintaining benefits eligibility.
           </p>
           <div class="box1 animated rotateIn ">
             <img
@@ -39,8 +39,8 @@ export default class LandingPage extends Component {
           <h2>Why PartnerBen</h2>
 
           <p>
-            Starbucks is known for their generous benefits to part-time and
-            full-time employees.
+            Starbucks is known for their generous benefits <br />
+            to part-time and full-time employees.
           </p>
           <p>
             <b>• 30,000+ locations worldwide </b>
@@ -51,7 +51,7 @@ export default class LandingPage extends Component {
           </p>
 
           <p>
-            there is a great need for partners to be able to track their hours
+            Partners can now easily track their hours <br />
             to ensure they keep their benefits.
           </p>
         </section>

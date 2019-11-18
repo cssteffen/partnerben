@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "../RegistrationForm/RegistrationForm.css";
 
 export default class RegistrationForm extends Component {
@@ -31,7 +32,10 @@ export default class RegistrationForm extends Component {
           </div>
         </form>
         <p>
-          Already have an account? <a class="reset-link">Sign-in</a>
+          Already have an account?{" "}
+          <Link to="/login" className="reset-link">
+            Sign-in
+          </Link>
         </p>
       </section>
     );

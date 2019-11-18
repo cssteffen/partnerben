@@ -5,7 +5,7 @@ export default class PaycheckForm extends Component {
   render() {
     return (
       <section>
-        <form id="enterPaycheck">
+        <form className="enterPaycheck">
           <div class="form-section">
             <div class="paycheck-date-div">
               <label for="paycheck-date">Paycheck Date</label>

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCoffee,
@@ -97,7 +98,7 @@ export default class DashboardPage extends Component {
           </p>
 
           <button class="paystub-btn">
-            <a href="../Paystub Entry Form/paystubForm.html">Enter PayStubs</a>
+            <Link to="/paystub">Enter PayStubs</Link>
           </button>
         </section>
       </div>

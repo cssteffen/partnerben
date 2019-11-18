@@ -6,15 +6,15 @@ export default class Nav extends Component {
     return (
       <header role="banner">
         <div class="buttons-login-register">
-          <li>
-            <a href="./Login Form/loginForm.html">Log in</a>
-          </li>
-          <li>
-            <a href="./Register Form/registerForm.html">Register</a>
-          </li>
-          <li>
-            <a href="./Dashboard/dashboard.html">Demo</a>
-          </li>
+          <a href="./login">
+            <li>Log in</li>
+          </a>
+          <a href="./register">
+            <li>Register</li>
+          </a>
+          <a href="./dashboard">
+            <li>Demo</li>
+          </a>
         </div>
       </header>
     );

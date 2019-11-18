@@ -21,7 +21,10 @@ export default class LoginForm extends Component {
           </div>
         </form>
         <p>
-          Request password <a class="reset-link">reset link</a>
+          Request password{" "}
+          <a href="/login" class="reset-link">
+            reset link
+          </a>
         </p>
       </section>
     );

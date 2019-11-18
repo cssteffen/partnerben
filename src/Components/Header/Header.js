@@ -12,7 +12,7 @@ export default class Header extends Component {
           alt="coffee cup"
           height="35px"
         />
-        <a href="../index.html">
+        <a href="/">
           <div className="logo">
             <h1>PartnerBEN</h1>
           </div>
