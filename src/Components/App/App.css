@@ -1,6 +1,11 @@
 body {
   background-color: white;
 }
+
+/* =======changed footer=========*/
+footer {
+  display: block;
+}
 .App {
   text-align: center;
 }
@@ -15,12 +20,20 @@ body {
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+/* =======ADDED Flexfow to sections=========*/
 section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  min-width: 300px;
+  justify-content: center;
+
   min-height: 200px;
   padding: 30px 15px;
   background-color: #bbb;
 }
+
 /*
 section:nth-child(even) {
   background-color: #ddd;
@@ -30,19 +43,19 @@ section:nth-child(even) {
 section:nth-child(1) {
   margin: 0 auto;
   background-color: rgb(228, 228, 228);
-  max-width: 600px;
+  min-width: 300px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   /*text-align: center;*/
 }
 section:nth-child(2) {
   margin: 0 auto;
   background-color: #fffcfc;
-  max-width: 600px;
+  min-width: 300px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 section:nth-child(3) {
   margin: 0 auto;
-  max-width: 600px;
+  min-width: 300px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   /*background-color: #ddd8c4;*/
   background-color: #eee7ce;
@@ -50,14 +63,14 @@ section:nth-child(3) {
 section:nth-child(4) {
   margin: 0 auto;
   background-color: #fffcfc;
-  max-width: 600px;
+  min-width: 300px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 section:nth-child(5) {
   margin: 0 auto;
 
   background-color: #fffcfc;
-  max-width: 600px;
+  min-width: 300px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 section:nth-child(6) {
@@ -65,7 +78,7 @@ section:nth-child(6) {
 
   /*background-color: #362415;*/
   background-color: #fffcfc;
-  max-width: 600px;
+  min-width: 300px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 p {
