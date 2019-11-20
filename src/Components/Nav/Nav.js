@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 //import "./Nav.css";
 
 export default class Nav extends Component {
@@ -6,15 +7,17 @@ export default class Nav extends Component {
     return (
       <header role="banner">
         <div className="buttons-login-register">
-          <a href="./login">
+          <Link to="/login">
             <li>Log in</li>
-          </a>
-          <a href="./register">
+          </Link>
+
+          <Link to="/register">
             <li>Register</li>
-          </a>
-          <a href="./dashboard">
+          </Link>
+
+          <Link to="/dashboard">
             <li>Demo</li>
-          </a>
+          </Link>
         </div>
       </header>
     );

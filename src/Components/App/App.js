@@ -15,16 +15,16 @@ class App extends Component {
     return (
       <div>
         <div className="App">
-          <nav>
-            {" "}
-            <Header />
-          </nav>
-          <header>
-            {" "}
-            <Nav />
-          </header>
-          <main>
-            <BrowserRouter>
+          <BrowserRouter>
+            <nav>
+              {" "}
+              <Header />
+            </nav>
+            <header>
+              {" "}
+              <Nav />
+            </header>
+            <main>
               <Switch>
                 <Route exact path="/" component={LandingPage} />
                 <Route path="/login" component={LoginPage} />
@@ -32,8 +32,8 @@ class App extends Component {
                 <Route path="/dashboard" component={DashboardPage} />
                 <Route path="/paystub" component={PaycheckPage} />
               </Switch>
-            </BrowserRouter>
-          </main>
+            </main>
+          </BrowserRouter>
         </div>
         <Footer></Footer>
       </div>
