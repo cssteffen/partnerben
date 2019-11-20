@@ -26,7 +26,7 @@ export default class LandingPage extends Component {
             An online management system to easily track <br />
             vacation, sick + BEN hours for maintaining benefits eligibility.
           </p>
-          <div class="box1 animated rotateIn ">
+          <div className="box1 animated rotateIn ">
             <img
               className="spinny-logo-cup"
               src={coffeeCup}
@@ -58,24 +58,34 @@ export default class LandingPage extends Component {
 
         <section>
           <h2>Advantages</h2>
-          <p>Always be in the know</p>
-          <div className="box animated pulse">
-            <FontAwesomeIcon icon={faLightbulb} size={"7x"} color={"orange"} />
-          </div>
-          <p>Worry less with pace setter</p>
-          <div className="box animated swing">
-            <FontAwesomeIcon icon={faRunning} size={"7x"} color={"orange"} />
-          </div>
-          <p>Leverage accrued time off</p>
-          <div className="box animated pulse">
-            <FontAwesomeIcon icon={faLevelUpAlt} size={"7x"} color={"orange"} />
+          <div className="flex_container">
+            <p>Always be in the know</p>
+            <div className="box animated pulse">
+              <FontAwesomeIcon
+                icon={faLightbulb}
+                size={"7x"}
+                color={"orange"}
+              />
+            </div>
+            <p>Worry less with pace setter</p>
+            <div className="box animated swing">
+              <FontAwesomeIcon icon={faRunning} size={"7x"} color={"orange"} />
+            </div>
+            <p>Leverage accrued time off</p>
+            <div className="box animated pulse">
+              <FontAwesomeIcon
+                icon={faLevelUpAlt}
+                size={"7x"}
+                color={"orange"}
+              />
+            </div>
           </div>
         </section>
 
         <section>
           <h2>How it Works</h2>
           <p>
-            <a href="/" class="reset-link">
+            <a href="/" className="reset-link">
               Sign up
             </a>{" "}
             for an account

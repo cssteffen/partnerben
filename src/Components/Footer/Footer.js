@@ -21,7 +21,7 @@ export default class Footer extends Component {
             </a>
           </p>
           <a
-            class="social"
+            className="social"
             href="https://github.com/cssteffen"
             target="_blank"
             rel="noopener noreferrer"
@@ -30,7 +30,7 @@ export default class Footer extends Component {
           </a>{" "}
           &nbsp; &nbsp;
           <a
-            class="social"
+            className="social"
             href="https://www.linkedin.com/in/cara-steffen"
             target="_blank"
             rel="noopener noreferrer"

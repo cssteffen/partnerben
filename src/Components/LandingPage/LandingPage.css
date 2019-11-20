@@ -71,3 +71,16 @@
   color: black;
   cursor: pointer;
 }
+/*
+.flex_container p {
+  text-align: center;
+  padding: 10px;
+}
+.flex_container {
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: 2;
+  justify-content: space-between;
+  align-items: center;
+}
+*/

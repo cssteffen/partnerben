@@ -5,7 +5,7 @@ import "./header.css";
 export default class Header extends Component {
   render() {
     return (
-      <nav role="navigation" class="header">
+      <nav role="navigation" className="header">
         <img
           className="logo-cup"
           src={coffeeCup}

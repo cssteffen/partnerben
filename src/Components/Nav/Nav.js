@@ -5,7 +5,7 @@ export default class Nav extends Component {
   render() {
     return (
       <header role="banner">
-        <div class="buttons-login-register">
+        <div className="buttons-login-register">
           <a href="./login">
             <li>Log in</li>
           </a>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, BrowserRouter } from "react-router-dom";
 import "./App.css";
 import Header from "../Header/Header";
 import Nav from "../Nav/Nav";
@@ -13,7 +13,7 @@ import PaycheckPage from "../../routes/PaycheckPage/PaycheckPage";
 class App extends Component {
   render() {
     return (
-      <body>
+      <div>
         <div className="App">
           <nav>
             {" "}
@@ -24,17 +24,19 @@ class App extends Component {
             <Nav />
           </header>
           <main>
-            <Switch>
-              <Route exact path="/" component={LandingPage} />
-              <Route path="/login" component={LoginPage} />
-              <Route path="/register" component={RegistrationPage} />
-              <Route path="/dashboard" component={DashboardPage} />
-              <Route path="/paystub" component={PaycheckPage} />
-            </Switch>
+            <BrowserRouter>
+              <Switch>
+                <Route exact path="/" component={LandingPage} />
+                <Route path="/login" component={LoginPage} />
+                <Route path="/register" component={RegistrationPage} />
+                <Route path="/dashboard" component={DashboardPage} />
+                <Route path="/paystub" component={PaycheckPage} />
+              </Switch>
+            </BrowserRouter>
           </main>
         </div>
         <Footer></Footer>
-      </body>
+      </div>
     );
   }
 }
