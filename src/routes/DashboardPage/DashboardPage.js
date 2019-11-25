@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import PaycheckApiService from "../../services/paycheck-api-service";
+import PaycheckContext from "../../Components/contexts/PaycheckContext";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -12,7 +14,31 @@ import {
 import "./DashboardPage.css";
 
 export default class DashboardPage extends Component {
+  static defaultProps = {
+    match: { params: {} }
+  };
+
+  static contextType = PaycheckContext;
+
+  componentDidMount() {
+    //const { paycheck } = this.props.match.params;
+    //const paycheck;
+    this.context.clearError();
+  }
+
+  componentWillUnmount() {
+    //this.context.clearPaycheck();
+  }
+
   render() {
+    function callPaycheck() {
+      PaycheckApiService.getPaycheck(paycheck.id)
+        .then(this.context.setPaycheck)
+        .catch(this.context.setError);
+
+      const { paycheck = {} } = this.context;
+    }
+
     return (
       <div className="dashboardPage_div">
         <section>
@@ -97,7 +123,7 @@ export default class DashboardPage extends Component {
             Enter a new paystub or edit an existing one
           </p>
 
-          <button class="paystub-btn">
+          <button className="paystub-btn">
             <Link to="/paystub">Enter PayStubs</Link>
           </button>
         </section>

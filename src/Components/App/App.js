@@ -9,8 +9,16 @@ import LoginPage from "../../routes/LoginPage/LoginPage";
 import DashboardPage from "../../routes/DashboardPage/DashboardPage";
 import RegistrationPage from "../../routes/RegistrationPage/RegistrationPage";
 import PaycheckPage from "../../routes/PaycheckPage/PaycheckPage";
+import NotFoundPage from "../../routes/NotFoundPage/NoteFoundPage";
 
 class App extends Component {
+  state = { hasError: false };
+
+  static getDerivedStateFromError(error) {
+    console.error(error);
+    return { hasError: true };
+  }
+
   render() {
     return (
       <div>
@@ -25,12 +33,16 @@ class App extends Component {
               <Nav />
             </header>
             <main>
+              {this.state.hasError && (
+                <p className="red">There was an error! Oh no!</p>
+              )}
               <Switch>
                 <Route exact path="/" component={LandingPage} />
                 <Route path="/login" component={LoginPage} />
                 <Route path="/register" component={RegistrationPage} />
                 <Route path="/dashboard" component={DashboardPage} />
                 <Route path="/paystub" component={PaycheckPage} />
+                <Route component={NotFoundPage} />
               </Switch>
             </main>
           </BrowserRouter>
