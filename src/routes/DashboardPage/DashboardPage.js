@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PaycheckApiService from "../../services/paycheck-api-service";
+//import PaycheckApiService from "../../services/paycheck-api-service";
 import PaycheckContext from "../../Components/contexts/PaycheckContext";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,7 +15,16 @@ import "./DashboardPage.css";
 
 export default class DashboardPage extends Component {
   static defaultProps = {
-    match: { params: {} }
+    match: { params: {} },
+    location: {},
+    history: {
+      push: () => {}
+    }
+  };
+
+  handlePaycheckEntrySuccess = () => {
+    const { history } = this.props;
+    history.push("/dashboard");
   };
 
   static contextType = PaycheckContext;
@@ -31,13 +40,13 @@ export default class DashboardPage extends Component {
   }
 
   render() {
-    function callPaycheck() {
-      PaycheckApiService.getPaycheck(paycheck.id)
-        .then(this.context.setPaycheck)
-        .catch(this.context.setError);
+    //function callPaycheck() {
+    //PaycheckApiService.getPaycheck(paycheck.id)
+    //.then(this.context.setPaycheck)
+    //.catch(this.context.setError);
 
-      const { paycheck = {} } = this.context;
-    }
+    //const { paycheck = {} } = this.context;
+    //}
 
     return (
       <div className="dashboardPage_div">
@@ -123,9 +132,14 @@ export default class DashboardPage extends Component {
             Enter a new paystub or edit an existing one
           </p>
 
-          <button className="paystub-btn">
-            <Link to="/paystub">Enter PayStubs</Link>
-          </button>
+          <Link to="/paystub">
+            <button className="paystub-btn">Enter PayStubs</button>
+          </Link>
+
+          <Link to="/paystubList">
+            {" "}
+            <button>Edit PayStubs </button>
+          </Link>
         </section>
       </div>
     );

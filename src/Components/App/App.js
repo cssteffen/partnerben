@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch, BrowserRouter } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import "./App.css";
 import Header from "../Header/Header";
 import Nav from "../Nav/Nav";
@@ -10,6 +10,7 @@ import DashboardPage from "../../routes/DashboardPage/DashboardPage";
 import RegistrationPage from "../../routes/RegistrationPage/RegistrationPage";
 import PaycheckPage from "../../routes/PaycheckPage/PaycheckPage";
 import NotFoundPage from "../../routes/NotFoundPage/NoteFoundPage";
+import PaycheckListPage from "../../routes/PaycheckListPage/PaycheckListPage";
 
 class App extends Component {
   state = { hasError: false };
@@ -23,29 +24,28 @@ class App extends Component {
     return (
       <div>
         <div className="App">
-          <BrowserRouter>
-            <nav>
-              {" "}
-              <Header />
-            </nav>
-            <header>
-              {" "}
-              <Nav />
-            </header>
-            <main>
-              {this.state.hasError && (
-                <p className="red">There was an error! Oh no!</p>
-              )}
-              <Switch>
-                <Route exact path="/" component={LandingPage} />
-                <Route path="/login" component={LoginPage} />
-                <Route path="/register" component={RegistrationPage} />
-                <Route path="/dashboard" component={DashboardPage} />
-                <Route path="/paystub" component={PaycheckPage} />
-                <Route component={NotFoundPage} />
-              </Switch>
-            </main>
-          </BrowserRouter>
+          <nav>
+            {" "}
+            <Header />
+          </nav>
+          <header>
+            {" "}
+            <Nav />
+          </header>
+          <main>
+            {this.state.hasError && (
+              <p className="red">There was an error! Oh no!</p>
+            )}
+            <Switch>
+              <Route exact path="/" component={LandingPage} />
+              <Route path="/login" component={LoginPage} />
+              <Route path="/register" component={RegistrationPage} />
+              <Route path="/dashboard" component={DashboardPage} />
+              <Route path="/paystub" component={PaycheckPage} />
+              <Route path="/paystubList" component={PaycheckListPage} />
+              <Route component={NotFoundPage} />
+            </Switch>
+          </main>
         </div>
         <Footer></Footer>
       </div>

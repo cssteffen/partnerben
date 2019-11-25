@@ -10,6 +10,7 @@ export default class PaycheckPage extends Component {
   };
 
   static contextType = PaycheckContext;
+
   /*
   componentDidMount() {
     const { paycheckId } = this.props.match.params;
@@ -28,12 +29,15 @@ export default class PaycheckPage extends Component {
     const { paycheck } = this.context;
     return (
       <>
-        <PaycheckContent paycheck={paycheck} />
         <PaycheckForm />
       </>
     );
   }
   */
+  handlePaycheckEntrySuccess = () => {
+    const { history } = this.props;
+    history.push("/dashboard");
+  };
 
   render() {
     return (
@@ -44,7 +48,9 @@ export default class PaycheckPage extends Component {
             Enter a new paystub or edit an existing one.
           </p>
         </div>
-        <PaycheckForm></PaycheckForm>
+        <PaycheckForm
+          onPaycheckEntrySuccess={this.handlePaycheckEntrySuccess}
+        />
       </div>
     );
   }

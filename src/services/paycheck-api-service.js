@@ -12,8 +12,8 @@ const PaycheckApiService = {
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
     );
   },
-  getPaycheck(paycheck) {
-    return fetch(`${config.API_ENDPOINT}/paystubs/${paycheck.id}`, {
+  getPaycheck(paycheckId) {
+    return fetch(`${config.API_ENDPOINT}/paystubs/${paycheckId}`, {
       headers: {
         //authorization: `basic ${TokenService.getAuthToken()}`
         authorization: `bearer ${TokenService.getAuthToken()}`

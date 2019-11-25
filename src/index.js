@@ -2,12 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
+import { PaycheckListProvider } from "./Components/contexts/PaycheckListContext";
+import { PaycheckProvider } from "./Components/contexts/PaycheckContext";
 import App from "./Components/App/App";
 //import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <PaycheckListProvider>
+      <PaycheckProvider>
+        <App />
+      </PaycheckProvider>
+    </PaycheckListProvider>
   </BrowserRouter>,
   document.getElementById("root")
 );

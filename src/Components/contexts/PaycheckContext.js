@@ -11,6 +11,7 @@ const PaycheckContext = React.createContext({
   clearError: () => {},
   setPaycheck: () => {},
   clearPaycheck: () => {},
+  setUser: () => {},
   addPaycheck: () => {}
 });
 
@@ -35,6 +36,10 @@ export class PaycheckProvider extends Component {
     this.setState({ paycheck });
   };
 
+  setUser = user => {
+    this.setState({ user });
+  };
+
   addPaycheck = paycheck => {
     this.setPaycheck([...this.state.paycheck, paycheck]);
   };
@@ -50,6 +55,7 @@ export class PaycheckProvider extends Component {
       setError: this.setError,
       clearError: this.clearError,
       setPaycheck: this.setPaycheck,
+      setUser: this.setUser,
       clearPaycheck: this.clearPaycheck
     };
     return (

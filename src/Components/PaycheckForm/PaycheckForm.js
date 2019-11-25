@@ -8,7 +8,8 @@ import "./PaycheckForm.css";
 
 export default class PaycheckForm extends Component {
   static defaultProps = {
-    match: { params: {} }
+    // match: { params: {} },
+    onPaycheckEntrySuccess: () => {}
   };
 
   static contextType = PaycheckContext;
@@ -17,7 +18,7 @@ export default class PaycheckForm extends Component {
 
   handleChange = ev => {
     ev.preventDefault();
-    const { paycheck } = this.props.match.params;
+    //const { paycheck } = this.props.match.params;
     //this.setState({ value: ev.target.value });
 
     //this.setState({ error: null });
@@ -53,7 +54,10 @@ export default class PaycheckForm extends Component {
         )
       )
       .then(this.context.setPaycheck())
-      .then(this.context.addPaycheck())
+      //.then(this.context.addPaycheck())
+      .then(res => {
+        this.props.onPaycheckEntrySuccess();
+      })
       .catch(res => {
         this.setState({ error: res.error });
       });
