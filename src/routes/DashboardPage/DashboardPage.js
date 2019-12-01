@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-//import PaycheckApiService from "../../services/paycheck-api-service";
+import PaycheckApiService from "../../services/paycheck-api-service";
 import PaycheckContext from "../../Components/contexts/PaycheckContext";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,6 +12,7 @@ import {
   faCheck
 } from "@fortawesome/free-solid-svg-icons";
 import "./DashboardPage.css";
+//import { PaycheckListProvider } from "../../Components/contexts/PaycheckListContext";
 
 export default class DashboardPage extends Component {
   static defaultProps = {
@@ -30,10 +31,29 @@ export default class DashboardPage extends Component {
   static contextType = PaycheckContext;
 
   componentDidMount() {
-    //const { paycheck } = this.props.match.params;
-    //const paycheck;
+    const { paycheckId } = 20;
+    const { paycheck } = this.context;
+
+    console.log("paycheckId", paycheckId);
+    console.log("paycheck", paycheck);
+
     this.context.clearError();
+
+    PaycheckApiService.getPaycheck()
+      .then(this.context.setPaycheck)
+      .then(this.context.paycheck)
+      .catch(this.context.setError);
   }
+
+  /*
+    componentDidMount() {
+    this.context.clearError();
+    PaycheckApiService.getPaychecks()
+      .then(this.context.setPaycheckList)
+      .then(this.context.paycheckList)
+      .catch(this.context.setError);
+  }
+  */
 
   componentWillUnmount() {
     //this.context.clearPaycheck();

@@ -17,6 +17,7 @@ export class PaycheckListProvider extends Component {
 
   setPaycheckList = paycheckList => {
     this.setState({ paycheckList });
+    console.log("PAYCHECK0", paycheckList);
   };
 
   setError = error => {

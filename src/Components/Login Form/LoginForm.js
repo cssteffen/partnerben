@@ -3,10 +3,6 @@ import TokenService from "../../services/token-service";
 import AuthApiService from "../../services/auth-api-service";
 import "./loginForm.css";
 
-// =================
-//import { Button, Input } from "../Utils/Utils";
-// ==================
-
 export default class LoginForm extends Component {
   static defaultProps = {
     onLoginSuccess: () => {}
@@ -16,16 +12,16 @@ export default class LoginForm extends Component {
 
   handleSubmitBasicAuth = ev => {
     ev.preventDefault();
-    const { user_name, password } = ev.target;
+    const { user_email, password } = ev.target;
 
     //console.log('login form submitted')
     //console.log({ user_email, password })
 
     TokenService.saveAuthToken(
-      TokenService.makeBasicAuthToken(user_name.value, password.value)
+      TokenService.makeBasicAuthToken(user_email.value, password.value)
     );
 
-    user_name.value = "";
+    user_email.value = "";
     password.value = "";
     this.props.onLoginSuccess();
   };
@@ -45,7 +41,7 @@ export default class LoginForm extends Component {
         this.props.onLoginSuccess();
       })
       .catch(res => {
-        this.setState({ error: res.error.message });
+        this.setState({ error: res.error });
       });
   };
   render() {

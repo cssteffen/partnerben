@@ -11,6 +11,8 @@ import RegistrationPage from "../../routes/RegistrationPage/RegistrationPage";
 import PaycheckPage from "../../routes/PaycheckPage/PaycheckPage";
 import NotFoundPage from "../../routes/NotFoundPage/NoteFoundPage";
 import PaycheckListPage from "../../routes/PaycheckListPage/PaycheckListPage";
+import PublicOnlyRoute from "../Utilities/PublicOnlyRoute";
+import PrivateRoute from "../Utilities/PrivateRoute";
 
 class App extends Component {
   state = { hasError: false };
@@ -38,11 +40,11 @@ class App extends Component {
             )}
             <Switch>
               <Route exact path="/" component={LandingPage} />
-              <Route path="/login" component={LoginPage} />
-              <Route path="/register" component={RegistrationPage} />
+              <PublicOnlyRoute path="/login" component={LoginPage} />
+              <PublicOnlyRoute path="/register" component={RegistrationPage} />
               <Route path="/dashboard" component={DashboardPage} />
               <Route path="/paystub" component={PaycheckPage} />
-              <Route path="/paystubList" component={PaycheckListPage} />
+              <PrivateRoute path="/paystubList" component={PaycheckListPage} />
               <Route component={NotFoundPage} />
             </Switch>
           </main>

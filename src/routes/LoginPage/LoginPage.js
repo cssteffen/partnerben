@@ -22,7 +22,6 @@ export default class LoginPage extends Component {
         <div>
           <h2>Login</h2>
         </div>
-
         <LoginForm onLoginSuccess={this.handleLoginSuccess} />
       </div>
     );

@@ -64,6 +64,7 @@ export default class PaycheckForm extends Component {
   };
 
   render() {
+    const { error } = this.state;
     //const startDate = new Date("2019-07-12T12:59-0500");
     //moment(startDate).format("MMMM Do YYYY, h:mm:ss a"); // November 23rd 2019, 11:53:52 pm
     //const date = new Date("2019-07-12T12:59-0500");
@@ -71,6 +72,8 @@ export default class PaycheckForm extends Component {
     return (
       <section>
         <form className="enterPaycheck" onSubmit={this.handleSubmit}>
+          <div role="alert">{error && <p className="red">{error}</p>}</div>
+
           <div className="form-section">
             <div className="paycheck-date-div">
               <label htmlFor="paycheck-date">Paycheck Date</label>
@@ -125,17 +128,17 @@ export default class PaycheckForm extends Component {
 
             <div className="ben-hrs-div">
               <label htmlFor="ben-hours">BEN hours</label>
-              <input type="decimal" name="ben_hours" />
+              <input type="decimal" name="ben_hours" required />
             </div>
 
             <div className="vacation-hrs-div">
               <label htmlFor="vacation-hours">Vacation hours</label>
-              <input type="decimal" name="vacation_hours" />
+              <input type="decimal" name="vacation_hours" required />
             </div>
 
             <div className="sick-hrs-div">
               <label htmlFor="sick-hours">Sick hours</label>
-              <input type="decimal" name="sick_hours" />
+              <input type="decimal" name="sick_hours" required />
             </div>
             <button type="submit">Submit</button>
           </div>
