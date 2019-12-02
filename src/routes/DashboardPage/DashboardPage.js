@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PaycheckApiService from "../../services/paycheck-api-service";
+//import PaycheckApiService from "../../services/paycheck-api-service";
 import PaycheckContext from "../../Components/contexts/PaycheckContext";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -31,18 +31,15 @@ export default class DashboardPage extends Component {
   static contextType = PaycheckContext;
 
   componentDidMount() {
-    const { paycheckId } = 20;
-    const { paycheck } = this.context;
-
-    console.log("paycheckId", paycheckId);
-    console.log("paycheck", paycheck);
-
-    this.context.clearError();
-
-    PaycheckApiService.getPaycheck()
-      .then(this.context.setPaycheck)
-      .then(this.context.paycheck)
-      .catch(this.context.setError);
+    //const { paycheckId } = 6;
+    //const { paycheck } = this.context;
+    //console.log("paycheckId", paycheckId);
+    //console.log("paycheck", paycheck);
+    //this.context.clearError();
+    //PaycheckApiService.getPaycheck(paycheckId)
+    //.then(this.context.setPaycheck)
+    //.then(this.context.paycheck)
+    //.catch(this.context.setError);
   }
 
   /*
